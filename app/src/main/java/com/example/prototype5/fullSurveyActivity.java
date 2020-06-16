@@ -7,33 +7,51 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-public class fullSurveyActivity extends AppCompatActivity {
+public class fullSurveyActivity extends AppCompatActivity implements View.OnClickListener{
 
-    Button btn_mainPage;
-    ImageButton btn_back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_full_survey);
 
-        btn_back=(ImageButton) findViewById(R.id.backBtn6);
+        Button btn_mainPage=(Button) findViewById(R.id.userMainPageBtn);
+        ImageButton btn_back=(ImageButton) findViewById(R.id.backBtn6);
 
-        btn_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        btn_mainPage.setOnClickListener(this);
+        btn_back.setOnClickListener(this);
 
-        btn_mainPage=(Button) findViewById(R.id.userMainPageBtn);
+//        btn_back.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                finish();
+//            }
+//        });
+//
+//
+//        btn_mainPage.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent=new Intent( fullSurveyActivity.this,mainPageActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+    }
 
-        btn_mainPage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+    @Override
+    public void onClick(View v) {
+
+        switch(v.getId()){
+            case R.id.userMainPageBtn:
                 Intent intent=new Intent( fullSurveyActivity.this,mainPageActivity.class);
                 startActivity(intent);
-            }
-        });
+                break;
+            case R.id.backBtn6:
+                finish();
+                break;
+            default:
+                break;
+
+        }
     }
 }

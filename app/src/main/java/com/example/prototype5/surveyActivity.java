@@ -7,32 +7,49 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-public class surveyActivity extends AppCompatActivity {
+public class surveyActivity extends AppCompatActivity implements View.OnClickListener{
 
-    Button btn_bodyPartSelect;
-    ImageButton btn_back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_survey);
 
-        btn_bodyPartSelect=(Button) findViewById(R.id.bodyPartSelectBtn);
-        btn_back=(ImageButton) findViewById(R.id.backBtn3);
+        Button btn_bodyPartSelect=(Button) findViewById(R.id.bodyPartSelectBtn);
+        ImageButton btn_back=(ImageButton) findViewById(R.id.backBtn3);
 
-        btn_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        btn_bodyPartSelect.setOnClickListener(this);
+        btn_back.setOnClickListener(this);
 
-        btn_bodyPartSelect.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+//        btn_back.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                finish();
+//            }
+//        });
+//
+//        btn_bodyPartSelect.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent=new Intent( surveyActivity.this,bodyPartSelectActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch(v.getId()){
+            case R.id.bodyPartSelectBtn:
                 Intent intent=new Intent( surveyActivity.this,bodyPartSelectActivity.class);
                 startActivity(intent);
-            }
-        });
+                break;
+            case R.id.backBtn3:
+                finish();
+                break;
+            default:
+                break;
+
+        }
     }
 }
