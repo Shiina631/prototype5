@@ -10,17 +10,17 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="164dp"
-        android:layout_height="49dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="200dp"
         android:text="@string/appName"
         android:textColor="@color/white"
         android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/editText2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.129"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.7" />
+        tools:layout_editor_absoluteY="161dp" />
 
     <Button
         android:id="@+id/loginAccBtn"
@@ -28,14 +28,13 @@
         android:layout_height="42dp"
         android:layout_marginStart="64dp"
         android:layout_marginEnd="64dp"
-        android:layout_marginBottom="28dp"
         android:background="@drawable/button1"
         android:text="@string/login"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/registerBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="478dp" />
 
     <Button
         android:id="@+id/registerBtn"
@@ -43,14 +42,13 @@
         android:layout_height="42dp"
         android:layout_marginStart="64dp"
         android:layout_marginEnd="64dp"
-        android:layout_marginBottom="28dp"
         android:background="@drawable/button2"
         android:text="@string/register"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/forgetPasswordBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="548dp" />
 
     <Button
         android:id="@+id/forgetPasswordBtn"
@@ -58,14 +56,13 @@
         android:layout_height="42dp"
         android:layout_marginStart="64dp"
         android:layout_marginEnd="64dp"
-        android:layout_marginBottom="72dp"
         android:background="@drawable/button3"
         android:text="@string/forgot_password"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="618dp" />
 
     <EditText
         android:id="@+id/editText2"
@@ -73,17 +70,16 @@
         android:layout_height="50sp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="20dp"
+        android:autofillHints="@string/email_address"
         android:background="@drawable/input_field"
         android:ems="10"
         android:hint="@string/email_address"
         android:inputType="textPersonName"
         android:textColor="@color/grey"
-        app:layout_constraintBottom_toTopOf="@+id/editText3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        android:autofillHints="@string/email_address" />
+        tools:layout_editor_absoluteY="246dp" />
 
     <EditText
         android:id="@+id/editText3"
@@ -91,17 +87,16 @@
         android:layout_height="50sp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="112dp"
+        android:autofillHints="@string/password"
         android:background="@drawable/input_field"
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
         android:textColor="@color/grey"
-        app:layout_constraintBottom_toTopOf="@+id/loginAccBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        android:autofillHints="@string/password" />
+        tools:layout_editor_absoluteY="316dp" />
 
     <ImageButton
         android:id="@+id/backBtn"
@@ -111,11 +106,9 @@
         android:layout_marginTop="28dp"
         android:layout_marginEnd="353dp"
         android:contentDescription="@string/back"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0"
         app:srcCompat="@drawable/backbutton" />
 </android.support.constraint.ConstraintLayout>
